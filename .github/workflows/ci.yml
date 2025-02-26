@@ -40,7 +40,7 @@ jobs:
 
   towncrier:
     name: Check towncrier
-    uses: Trighap52/towncrier-run/towncrier-run.yml@main
+    uses: Trighap52/towncrier-run/.github/workflows/towncrier-run.yml@main
     with:
       # Although we only want to install the dev dependencies, we have to install the
       # core, which means we need travertino as well.
