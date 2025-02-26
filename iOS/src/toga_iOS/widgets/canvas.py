@@ -265,7 +265,7 @@ class Canvas(Widget):
         ]
         return (
             ceil(max(size.width for size in sizes)),
-            self._line_height(font) * len(sizes),
+            self._line_height(font, line_height_factor) * len(sizes),
         )
 
     def write_text(self, text, x, y, font, baseline, line_height_factor=1, **kwargs):
