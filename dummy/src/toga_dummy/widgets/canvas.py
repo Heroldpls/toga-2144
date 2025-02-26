@@ -251,7 +251,7 @@ class Canvas(Widget):
                 height = lines * line_height_factor * 18
             else:
                 width = int(len(text) * font.interface.size * 1.5)
-                height = line_height_factor * int(font.interface.size * 1.5)
+                height = lines * line_height_factor * int(font.interface.size * 1.5)
 
         return width, height
 
