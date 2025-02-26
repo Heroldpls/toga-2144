@@ -342,7 +342,7 @@ class WriteText(DrawingObject):
             self.y,
             self.font._impl,
             self.baseline,
-            self.line_height_factor,
+            line_height_factor=self.line_height_factor,
             **kwargs,
         )
 
