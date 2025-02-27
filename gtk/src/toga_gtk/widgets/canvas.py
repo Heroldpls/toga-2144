@@ -61,7 +61,7 @@ class Canvas(Widget):
         cairo_context.fill()
 
         self.original_transform_matrix = cairo_context.get_matrix()
-        self.interface.context._draw(self, cairo_context=cairo_context)
+        self.interface.context._draw(self, cairo_context)
 
     def gtk_on_size_allocate(self, widget, allocation):
         """Called on widget resize, and calls the handler set on the interface, if
