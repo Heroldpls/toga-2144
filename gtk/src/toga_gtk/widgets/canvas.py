@@ -217,7 +217,7 @@ class Canvas(Widget):
     # Text
 
     def write_text(
-        self, text, x, y, font, baseline, cairo_context, line_height_factor=1, **kwargs
+        self, text, x, y, font, baseline, cairo_context, line_height_factor, **kwargs
     ):
         for op in ["fill", "stroke"]:
             if color := kwargs.pop(f"{op}_color", None):
@@ -276,7 +276,7 @@ class Canvas(Widget):
         line_height = ascent + descent
         return FontMetrics(ascent, descent, line_height)
 
-    def measure_text(self, text, font, line_height_factor=1):
+    def measure_text(self, text, font, line_height_factor):
         pango_context = self._pango_context(font)
         layout = Pango.Layout(pango_context)
 
