@@ -735,7 +735,7 @@ async def test_multiline_text(canvas, probe):
 
         # Explicit ALPHABETIC baseline, with default font and size but specified
         # line height. On most systems, this will go off the right edge of the canvas.
-        line_height = 3
+        line_height = 2.5
         text_filler.write_text(
             caption(Baseline.ALPHABETIC), X[2], y, line_height_factor=line_height
         )
