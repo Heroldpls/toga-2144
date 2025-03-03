@@ -761,8 +761,7 @@ async def test_multiline_text(canvas, probe):
             box.rect(left, top, width, height)
 
         with canvas.context.Fill() as text_filler:
-            line_height = 0.25 * i + 1
-            text_filler.write_text(text, left, y, font, baseline, line_height)
+            text_filler.write_text(text, left, y, font, baseline)
 
     await probe.redraw("Multiple text blocks should be drawn")
     # 0.09 is quite a high error threshold; it's equivalent to 324 pixels being
