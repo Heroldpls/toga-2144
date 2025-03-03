@@ -1,0 +1,1 @@
+Add parameter option None for line_height
