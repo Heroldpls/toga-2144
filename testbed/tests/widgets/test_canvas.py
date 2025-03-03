@@ -733,11 +733,14 @@ async def test_multiline_text(canvas, probe):
         # accepted.
         text_filler.write_text("", X[1], y)
 
-        # Explicit ALPHABETIC baseline, with default font and size. On most systems,
-        # this will go off the right edge of the canvas.
-        text_filler.write_text(caption(Baseline.ALPHABETIC), X[2], y)
+        # Explicit ALPHABETIC baseline, with default font and size but specified
+        # line height. On most systems, this will go off the right edge of the canvas.
+        line_height = 2.5
+        text_filler.write_text(
+            caption(Baseline.ALPHABETIC), X[2], y, line_height_factor=line_height
+        )
 
-    # Other baselines, with default font but specified size and various line heights
+    # Other baselines, with default font but specified size
     y = 130
     guideline.move_to(0, y)
     guideline.line_to(canvas.style.width, y)
@@ -745,8 +748,7 @@ async def test_multiline_text(canvas, probe):
 
     for i, baseline in enumerate([Baseline.BOTTOM, Baseline.MIDDLE, Baseline.TOP]):
         text = caption(baseline)
-        line_height = i
-        width, height = text_filler.measure_text(text, font, baseline, line_height)
+        width, height = canvas.measure_text(text, font)
         left = X[i]
         if baseline == Baseline.TOP:
             top = y
@@ -759,7 +761,7 @@ async def test_multiline_text(canvas, probe):
             box.rect(left, top, width, height)
 
         with canvas.context.Fill() as text_filler:
-            text_filler.write_text(text, left, y, font, baseline, line_height)
+            text_filler.write_text(text, left, y, font, baseline)
 
     await probe.redraw("Multiple text blocks should be drawn")
     # 0.09 is quite a high error threshold; it's equivalent to 324 pixels being
