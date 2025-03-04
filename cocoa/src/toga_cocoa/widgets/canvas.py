@@ -269,9 +269,9 @@ class Canvas(Widget):
 
     # Although the native API can measure and draw multi-line strings, this makes the
     # line spacing depend on the scale factor, which messes up the tests.
-    def _line_height(self, font, line_height_factor):
+    def _line_height(self, font, line_height):
         # descender is a negative number.
-        return ceil((font.native.ascender - font.native.descender) * line_height_factor)
+        return ceil((font.native.ascender - font.native.descender) * line_height)
 
     def measure_text(self, text, font, line_height):
         # We need at least a fill color to render, but that won't change the size.
