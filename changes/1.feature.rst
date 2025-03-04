@@ -1,1 +1,1 @@
-temp
+Add slider for line height in canvas example

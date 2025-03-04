@@ -1,1 +1,1 @@
-temp
+Fix inability to set non-integer line_height_factor.
