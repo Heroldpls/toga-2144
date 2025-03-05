@@ -34,7 +34,7 @@ jobs:
           pyreverse -ASmn -o png -p iOS ./iOS/src/toga_iOS/widgets/canvas.py
           pyreverse -ASmn -o png -p dummy ./dummy/src/toga_dummy/widgets/canvas.py
           pyreverse -Smn -o png -p examples ./examples/canvas/canvas
-          plantuml -svg -o diagrams/ ./toga_architecture.puml
+          plantuml -tpng -o diagrams/ ./toga_architecture.puml
           mv classes_canvas.png diagrams/
           mv classes_windows.png diagrams/
           mv classes_macOS.png diagrams/
