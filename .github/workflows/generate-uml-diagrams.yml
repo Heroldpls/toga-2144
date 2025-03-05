@@ -29,8 +29,8 @@ jobs:
           pyreverse -Smn -o png -p canvas ./core/src/toga/widgets/canvas
           pyreverse -ASmn -o png -p windows ./winforms/src/toga_winforms/widgets/canvas.py
           pyreverse -ASmn -o png -p macOS ./cocoa/src/toga_cocoa/widgets/canvas.py
-          pyreverse -ASmn -o png -p macOS ./gtk/src/toga_gtk/widgets/canvas.py
-          pyreverse -ASmn -o png -p macOS ./android/src/toga_android/widgets/canvas.py
+          pyreverse -ASmn -o png -p gtk ./gtk/src/toga_gtk/widgets/canvas.py
+          pyreverse -ASmn -o png -p android ./android/src/toga_android/widgets/canvas.py
           pyreverse -ASmn -o png -p iOS ./iOS/src/toga_iOS/widgets/canvas.py
           pyreverse -ASmn -o png -p dummy ./dummy/src/toga_dummy/widgets/canvas.py
           pyreverse -Smn -o png -p examples ./examples/canvas/canvas
