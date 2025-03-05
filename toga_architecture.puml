@@ -1,0 +1,332 @@
+
+@startuml
+title Toga Project Architecture
+
+package "macOS" {
+    package "Core Component" {
+        class Application
+        class Window
+        class DocumentWindow
+        class MainWindow
+    }
+    package "General Widget" {
+        class ActivityIndicator
+        class Button
+        class Canvas
+        class DetailedList
+        class Divider
+        class ImageView
+        class Label
+        class MapView
+        class MultilineTextInput
+        class NumberInput
+        class PasswordInput
+        class ProgressBar
+        class Selection
+        class Slider
+        class Switch
+        class Table
+        class TextInput
+        class Tree
+        class WebView
+        class Widget
+    }
+    package "Layout Widget" {
+        class Box
+        class ScrollContainer
+        class SplitContainer
+        class OptionContainer
+    }
+    package "Hardware" {
+        class Camera
+        class Location
+        class Screen
+    }
+    package "Resource" {
+        class AppPaths
+        class Command
+        class Dialogs
+        class Document
+        class Font
+        class Icon
+        class Image
+        class ListSource
+        class Source
+        class StatusIcons
+        class TreeSource
+        class Validators
+        class ValueSource
+    }
+}
+package "GTK" {
+    package "Core Component" {
+        class Application
+        class Window
+        class DocumentWindow
+        class MainWindow
+    }
+    package "General Widget" {
+        class ActivityIndicator
+        class Button
+        class Canvas
+        class DetailedList
+        class Divider
+        class ImageView
+        class Label
+        class MapView
+        class MultilineTextInput
+        class NumberInput
+        class PasswordInput
+        class ProgressBar
+        class Selection
+        class Slider
+        class Switch
+        class Table
+        class TextInput
+        class Tree
+        class WebView
+        class Widget
+    }
+    package "Layout Widget" {
+        class Box
+        class ScrollContainer
+        class SplitContainer
+        class OptionContainer
+    }
+    package "Hardware" {
+        class Location
+        class Screen
+    }
+    package "Resource" {
+        class AppPaths
+        class Command
+        class Dialogs
+        class Document
+        class Font
+        class Icon
+        class Image
+        class ListSource
+        class Source
+        class StatusIcons
+        class TreeSource
+        class Validators
+        class ValueSource
+    }
+}
+package "Windows" {
+    package "Core Component" {
+        class Application
+        class Window
+        class DocumentWindow
+        class MainWindow
+    }
+    package "General Widget" {
+        class Button
+        class Canvas
+        class DateInput
+        class DetailedList <<incomplete>>
+        class Divider
+        class ImageView
+        class Label
+        class MapView
+        class MultilineTextInput
+        class NumberInput
+        class PasswordInput
+        class ProgressBar
+        class Selection
+        class Slider
+        class Switch
+        class Table
+        class TextInput
+        class TimeInput
+        class WebView
+        class Widget
+    }
+    package "Layout Widget" {
+        class Box
+        class ScrollContainer
+        class SplitContainer
+        class OptionContainer
+    }
+    package "Hardware" {
+        class Screen
+    }
+    package "Resource" {
+        class AppPaths
+        class Command
+        class Dialogs
+        class Document
+        class Font
+        class Icon
+        class Image
+        class ListSource
+        class Source
+        class StatusIcons
+        class TreeSource
+        class Validators
+        class ValueSource
+    }
+}
+package "iOS" {
+    package "Core Component" {
+        class Application
+        class Window
+        class MainWindow
+    }
+    package "General Widget" {
+        class ActivityIndicator
+        class Button
+        class Canvas
+        class DetailedList
+        class Divider
+        class ImageView
+        class Label
+        class MapView
+        class MultilineTextInput
+        class NumberInput
+        class PasswordInput
+        class ProgressBar
+        class Selection
+        class Slider
+        class Switch
+        class TextInput
+        class WebView
+        class Widget
+    }
+    package "Layout Widget" {
+        class Box
+        class ScrollContainer
+        class OptionContainer
+    }
+    package "Hardware" {
+        class Camera
+        class Location
+        class Screen
+    }
+    package "Resource" {
+        class AppPaths
+        class Dialogs
+        class Font
+        class Icon
+        class Image
+        class ListSource
+        class Source
+        class TreeSource
+        class Validators
+        class ValueSource
+    }
+}
+package "Android" {
+    package "Core Component" {
+        class Application
+        class Window
+        class MainWindow
+    }
+    package "General Widget" {
+        class Button
+        class Canvas
+        class DateInput
+        class DetailedList
+        class Divider
+        class ImageView
+        class Label
+        class MapView
+        class MultilineTextInput
+        class NumberInput
+        class PasswordInput
+        class ProgressBar
+        class Selection
+        class Slider
+        class Switch
+        class Table <<incomplete>>
+        class TextInput
+        class TimeInput
+        class WebView
+        class Widget
+    }
+    package "Layout Widget" {
+        class Box
+        class ScrollContainer
+        class OptionContainer
+    }
+    package "Hardware" {
+        class Camera
+        class Location
+        class Screen
+    }
+    package "Resource" {
+        class AppPaths
+        class Command
+        class Dialogs
+        class Font
+        class Icon
+        class Image
+        class ListSource
+        class Source
+        class TreeSource
+        class Validators
+        class ValueSource
+    }
+}
+package "Web" {
+    package "Core Component" {
+        class Application <<incomplete>>
+        class Window <<incomplete>>
+        class MainWindow <<incomplete>>
+    }
+    package "General Widget" {
+        class ActivityIndicator <<incomplete>>
+        class Button <<incomplete>>
+        class Divider <<incomplete>>
+        class Label <<incomplete>>
+        class ProgressBar <<incomplete>>
+        class Switch <<incomplete>>
+        class TextInput <<incomplete>>
+        class Widget <<incomplete>>
+    }
+    package "Layout Widget" {
+        class Box <<incomplete>>
+    }
+    package "Hardware" {
+        class Screen <<incomplete>>
+    }
+    package "Resource" {
+        class Dialogs <<incomplete>>
+        class ListSource
+        class Source
+        class TreeSource
+        class Validators
+        class ValueSource
+    }
+}
+package "Terminal" {
+    package "Core Component" {
+        class Application <<incomplete>>
+        class Window <<incomplete>>
+        class MainWindow <<incomplete>>
+    }
+    package "General Widget" {
+        class Button <<incomplete>>
+        class Label <<incomplete>>
+        class TextInput <<incomplete>>
+        class Widget <<incomplete>>
+    }
+    package "Layout Widget" {
+        class Box <<incomplete>>
+    }
+    package "Hardware" {
+        class Screen <<incomplete>>
+    }
+    package "Resource" {
+        class AppPaths <<incomplete>>
+        class Dialogs <<incomplete>>
+        class Icon <<incomplete>>
+        class ListSource
+        class Source
+        class TreeSource
+        class Validators
+        class ValueSource
+    }
+}
+
+@enduml
