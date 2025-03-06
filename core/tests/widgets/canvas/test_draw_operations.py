@@ -621,14 +621,14 @@ def test_rect(widget):
         (
             {"text": "Hello world", "x": 10, "y": 20, "line_height": 1.5},
             "text='Hello world', x=10, y=20, font=<Font: system default size system>, "
-            "baseline=Baseline.ALPHABETIC, line_height=1.8",
+            "baseline=Baseline.ALPHABETIC, line_height=1.5",
             {
                 "text": "Hello world",
                 "x": 10,
                 "y": 20,
                 "font": Font(SYSTEM, SYSTEM_DEFAULT_FONT_SIZE)._impl,
                 "baseline": Baseline.ALPHABETIC,
-                "line_height": 1.8,
+                "line_height": 1.5,
             },
         ),
     ],

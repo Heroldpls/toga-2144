@@ -241,9 +241,7 @@ class Canvas(Widget):
         if line_height is None:
             line_height_factor = 1
         else:
-            # Point size used below for height is already multiplied by 1.2
-            # so we need to divide by the same amount.
-            line_height_factor = line_height / 1.2
+            line_height_factor = line_height
 
         lines = text.count("\n") + 1
         if font.interface.family == SYSTEM:
