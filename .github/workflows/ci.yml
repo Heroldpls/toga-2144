@@ -412,14 +412,14 @@ jobs:
         path: testbed/logs/*
 
     - name: Copy App Generated User Data
-      if: failure()
+      if: failure() && matrix.backend != 'android'
       run: |
         mkdir -p testbed/app_data
         cp -r "${{ matrix.app-user-data-path }}" testbed/app_data/testbed-app_data-${{ matrix.backend }}
 
     - name: Upload App Data
       uses: actions/upload-artifact@v4.6.1
-      if: failure()
+      if: failure() && matrix.backend != 'android'
       with:
         name: testbed-failure-app-data-${{ matrix.backend }}
         path: testbed/app_data/*
