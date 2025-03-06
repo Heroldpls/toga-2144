@@ -737,7 +737,7 @@ async def test_multiline_text(canvas, probe):
         # line height. On most systems, this will go off the right edge of the canvas.
         line_height = 2.5
         text_filler.write_text(
-            caption(Baseline.ALPHABETIC), X[2], y, line_height_factor=line_height
+            caption(Baseline.ALPHABETIC), X[2], y, line_height=line_height
         )
 
     # Other baselines, with default font but specified size
