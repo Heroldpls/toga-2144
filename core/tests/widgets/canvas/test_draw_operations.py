@@ -586,7 +586,7 @@ def test_rect(widget):
                 "y": 20,
                 "font": Font(SYSTEM, SYSTEM_DEFAULT_FONT_SIZE)._impl,
                 "baseline": Baseline.ALPHABETIC,
-                "line_height": 1,
+                "line_height": None,
             },
         ),
         # Baseline
@@ -600,7 +600,7 @@ def test_rect(widget):
                 "y": 20,
                 "font": Font(SYSTEM, SYSTEM_DEFAULT_FONT_SIZE)._impl,
                 "baseline": Baseline.TOP,
-                "line_height": 1,
+                "line_height": None,
             },
         ),
         # Font
@@ -614,7 +614,7 @@ def test_rect(widget):
                 "y": 20,
                 "font": Font("Cutive", 42)._impl,
                 "baseline": Baseline.ALPHABETIC,
-                "line_height": 1,
+                "line_height": None,
             },
         ),
         # Line height factor
