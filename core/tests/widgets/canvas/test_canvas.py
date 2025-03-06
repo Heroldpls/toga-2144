@@ -163,9 +163,11 @@ def test_measure_text(widget, font, line_height, expected):
     [
         (None, 1, (132, 24)),
         (Font(family=SYSTEM, size=SYSTEM_DEFAULT_FONT_SIZE), 1, (132, 24)),
+        (Font(family=SYSTEM, size=20), None, (220, 40)),
         (Font(family=SYSTEM, size=20), 1, (220, 40)),
         (Font(family=SYSTEM, size=20), 1.5, (220, 60)),
         (Font(family="Cutive", size=SYSTEM_DEFAULT_FONT_SIZE), 1, (198, 36)),
+        (Font(family="Cutive", size=20), None, (330, 60)),
         (Font(family="Cutive", size=20), 1, (330, 60)),
         (Font(family="Cutive", size=20), 1.5, (330, 90)),
     ],
