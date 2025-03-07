@@ -319,20 +319,20 @@ class WriteText(DrawingObject):
         y: float = 0.0,
         font: Font | None = None,
         baseline: Baseline = Baseline.ALPHABETIC,
-        line_height_factor: float = 1,
+        line_height: float | None = None,
     ):
         self.text = text
         self.x = x
         self.y = y
         self.font = font
         self.baseline = baseline
-        self.line_height_factor = line_height_factor
+        self.line_height = line_height
 
     def __repr__(self) -> str:
         return (
             f"{self.__class__.__name__}(text={self.text!r}, x={self.x}, y={self.y}, "
             f"font={self.font!r}, baseline={self.baseline}, "
-            f"line_height_factor={self.line_height_factor})"
+            f"line_height={self.line_height})"
         )
 
     def _draw(self, impl: Any, **kwargs: Any) -> None:
@@ -342,7 +342,7 @@ class WriteText(DrawingObject):
             self.y,
             self.font._impl,
             self.baseline,
-            self.line_height_factor,
+            self.line_height,
             **kwargs,
         )
 
@@ -356,6 +356,17 @@ class WriteText(DrawingObject):
             self._font = Font(family=SYSTEM, size=SYSTEM_DEFAULT_FONT_SIZE)
         else:
             self._font = value
+
+    @property
+    def line_height(self) -> float:
+        return self._line_height
+
+    @line_height.setter
+    def line_height(self, value: float | None) -> None:
+        if value is None:
+            self._line_height = 1
+        else:
+            self._line_height = value
 
 
 class Rotate(DrawingObject):
