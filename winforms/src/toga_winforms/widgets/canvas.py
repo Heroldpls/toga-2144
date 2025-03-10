@@ -304,7 +304,7 @@ class Canvas(Box):
         if line_height is None:
             return font.metric("LineSpacing")
         else:
-            return font.metric("EmHeight") * line_height
+            return font.native.SizeInPoints * line_height
 
     def write_text(
         self, text, x, y, font, baseline, line_height, draw_context, **kwargs
